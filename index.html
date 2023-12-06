@@ -166,29 +166,32 @@ However, 40 years on in 2022, the ground effect rules were reintroduced by the F
 
 
                 <script>
-        //array of slide images urls
-        var slideimages = ["SLIDE 1 Real.jpg", "Theslide2.jpg", "Theslide3.jpg", "Theslide4,jpg"];
-        var currentSlide = 0;
+  // Array of slide images urls
+  var slideimages = ["SLIDE 1 Real.jpg", "Theslide2.jpg", "Theslide3.jpg", "Theslide4.jpg"];
+  var currentSlide = 0;
 
-        function showSlide() {
-          document.getElementById('slide').src = slideImages[currentSlide];
-        }
-          function nextSlide() {
-            currentSlide= (currentSlide + 1) % slideImages.length;
-          }
-        function prevSlide() {
-          currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
-        }
+  function showSlide() {
+    document.getElementById('slide').src = slideimages[currentSlide];
+  }
 
-        function showSlideNumber(slideNumber) {
-          currentSlide = slideNumber - 1;
-          showSlide();
-        }
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideimages.length;
+    showSlide();
+  }
 
-        showSlide();
-        
-            
-      </script>
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideimages.length) % slideimages.length;
+    showSlide();
+  }
+
+  function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber - 1;
+    showSlide();
+  }
+
+  showSlide();
+</script>
+
 
 ‌
  
